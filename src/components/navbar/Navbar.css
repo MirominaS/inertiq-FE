@@ -1,0 +1,22 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(196, 127, 127); */
+    min-width: 100vw;
+    position: fixed;
+    height: 15vh;
+}
+.logo-dropdwon{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.login-signup{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

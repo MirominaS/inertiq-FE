@@ -12,9 +12,10 @@ const Navbar = () => {
   const [searchValue, setSearchValue] = useState("");
   useEffect(() => {
     setOptions([
-      { value: 1, label: "Physical Science" },
-      { value: 2, label: "Biological Science" },
-      { value: 3, label: "Technology" },
+      { value: 1, label: "Select Stream" },
+      { value: 2, label: "Physical Science" },
+      { value: 3, label: "Biological Science" },
+      { value: 4, label: "Technology" },
     ]);
   }, []);
   const handleStreamChange = (str) => {
@@ -36,18 +37,19 @@ const Navbar = () => {
         <div className="logo-container">
           <Logo height="60px" />
         </div>
-        <div className="dropdown-container">
+        <div className="dropdown">
           <Dropdown
             label={"Streams"}
             options={options}
             handleChange={handleStreamChange}
             value={streams}
             minWidth={10}
+            
           />
         </div>
       </div>
 
-      <div className="search-container">
+      <div className="search">
         <Search
           type={"text"}
           value={searchValue}
@@ -58,7 +60,7 @@ const Navbar = () => {
         <div className="login-container">
           <Button label={"Login"} onClick={handleLoginClick} />
         </div>
-        <div className="signup-container">
+        <div className="signup">
           <Button label={"Signup"} onClick={handleSignupClick} />
         </div>
       </div>
