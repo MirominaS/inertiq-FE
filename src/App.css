@@ -1,0 +1,15 @@
+:root {
+  --button-theme: #72246C;   /*maintainability*/
+  --button-theme-primary: #72246C;  /*generalizing*/
+  --button-theme-danger: red;
+}
+body {
+  margin: 0;
+}
+
+.app {
+  width: 100vw;
+}
+button{
+    cursor: pointer;
+}
