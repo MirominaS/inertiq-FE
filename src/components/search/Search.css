@@ -1,5 +1,5 @@
 .search-container {
-  width: 300px;
+  width: 400px;
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -17,14 +17,19 @@
   display: flex;
   align-items: center;
   color: var(--button-theme);
+  font-size: larger;
+  
 }
+/* mdi:search */
+
+
 
 .search-input {
   input {
-    width: 200px;
+    width: 350px;
     height: 40px;
     padding-left: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid var(--button-theme);
   }
 
