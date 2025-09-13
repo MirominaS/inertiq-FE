@@ -7,17 +7,20 @@
     position: fixed;
     height: 15vh;
 }
-.logo-dropdwon{
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.search-dropdown{
+     width: 800px;
+     display: flex;
+     align-items: center;
+     
+   
 
 }
 .login-signup{
-    width: 25%;
+    width: 300px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-right: 50px;
+    position: relative;
+    left: 15px;
+    gap: 15px;
+    
 }

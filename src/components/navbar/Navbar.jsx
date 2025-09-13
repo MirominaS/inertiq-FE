@@ -4,20 +4,15 @@ import Dropdown from "../dropdown/Dropdown";
 import { useEffect } from "react";
 import Button from "../button/Button";
 import Search from "../search/Search";
-import './Navbar.css'
+import "./Navbar.css";
 
 const Navbar = () => {
   const [options, setOptions] = useState([]);
   const [streams, setStreams] = useState(1);
   const [searchValue, setSearchValue] = useState("");
-  useEffect(() => {
-    setOptions([
-      { value: 1, label: "Select Stream" },
-      { value: 2, label: "Physical Science" },
-      { value: 3, label: "Biological Science" },
-      { value: 4, label: "Technology" },
-    ]);
-  }, []);
+
+  const items = ["Bio Science", "Physical Science", "Technology", "Commerce"];
+
   const handleStreamChange = (str) => {
     setStreams(str.target.value);
   };
@@ -33,28 +28,21 @@ const Navbar = () => {
   };
   return (
     <div className="nav-container">
-      <div className="logo-dropdwon">
-        <div className="logo-container">
-          <Logo height="60px" />
-        </div>
-        <div className="dropdown">
-          <Dropdown
-            label={"Streams"}
-            options={options}
-            handleChange={handleStreamChange}
-            value={streams}
-            minWidth={10}
-            
-          />
-        </div>
+      <div className="logo">
+          <Logo height="60px" />       
       </div>
 
-      <div className="search">
-        <Search
-          type={"text"}
-          value={searchValue}
-          handleChange={hanldInputChange}
-        />
+      <div className="search-dropdown">
+        <div className="dropdown">
+          <Dropdown text="Streams" listItems={items} />
+        </div>
+        <div className="search">
+          <Search
+            type={"text"}
+            value={searchValue}
+            handleChange={hanldInputChange}
+          />
+        </div>
       </div>
       <div className="login-signup">
         <div className="login-container">
