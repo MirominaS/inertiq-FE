@@ -2,12 +2,13 @@ button {
   border: 1px solid var(--button-theme);
   border-radius: 5px;
   width: 10vw;
-  height: 6vh;
+  height: 40px;
   color: var(--button-theme);
   font-size: medium;
   font-weight: 600;
   transition-duration: 0.5s;
   background-color: transparent;
+  padding: 0;
 }
 
 button:hover {
