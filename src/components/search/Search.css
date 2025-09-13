@@ -1,5 +1,5 @@
 .search-container {
-  width: 400px;
+  width: 600px;
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -26,11 +26,13 @@
 
 .search-input {
   input {
-    width: 350px;
+    width: 500px;
     height: 40px;
-    padding-left: 30px;
+    padding-left: 35px;
     border-radius: 10px;
     border: 1px solid var(--button-theme);
+    font-size: 15px;
+
   }
 
   input:focus {
