@@ -1,4 +1,57 @@
-.dropdwon{
+/* .dropdwon{
     font-size:small;
     font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+.dropdown-container {
+  width: 200px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+.dropdown-btn {
+    position: relative;
+    left: 30px;
+  button {
+    width: 150px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+   
+    border: 1px solid #72246c;
+    border-radius: 10px;
+    color: #72246c;
+    font-size: 15px;
+    font-weight: 600;
+    background: transparent;
+  }
+}
+.content {
+  background-color: #72246c;
+  padding-left: 15px;
+  margin-top: 2px;
+  border: 1px solid #72246c;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  .list-item {
+    height: 40px;
+    margin-right: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .list-item:hover {
+    /* background-color: chocolate; */
+    border: 1px solid rgb(255, 255, 255);
+  }
 }

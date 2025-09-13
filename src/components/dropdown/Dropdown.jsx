@@ -1,29 +1,38 @@
-import React from "react";
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import React, { useState } from "react";
+import { FaCaretDown } from "react-icons/fa6";
+import "./Dropdown.css";
 
-const Dropdown = ({minWidth = 120,label,handleChange,options,value}) => {
+ const Dropdown = ({ text, listItems }) => {
+  const [showItems, setShowItems] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("");
+
   return (
-    <div>
-      <Box sx={{ minWidth:{minWidth}}}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">{label}</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={value}
-            label={label}
-            onChange={handleChange}
-          >
-            {options.map(option => <MenuItem value = {option.value} > {option.label}</MenuItem> )}
-          </Select>
-        </FormControl>
-      </Box>
+    <div className="dropdown-container">
+      <div className="dropdown-btn">
+        <button onClick={() => setShowItems((current) => !current)}>
+          <FaCaretDown />
+          {selectedItem || text}
+        </button>
+        {showItems && (
+          <div className="content">
+            {listItems.map((listItem, index) => {
+              return (
+                <div
+                  className="list-item"
+                  key={index}
+                  onClick={() => {
+                    setSelectedItem(listItem);
+                    setShowItems(false);
+                  }}
+                >
+                  {listItem}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
-
 export default Dropdown;
