@@ -1,16 +1,18 @@
-button {
-  border: 1px solid var(--button-theme);
-  border-radius: 5px;
-  width: 10vw;
-  height: 40px;
-  color: var(--button-theme);
-  font-size: medium;
-  font-weight: 600;
-  transition-duration: 0.5s;
-  background-color: transparent;
-  padding: 0;
+.button-container {
+  gap: 0;
+  button {
+    border: 1px solid var(--button-theme);
+    border-radius: 10px;
+    width: 100px;
+    height: 45px;
+    color: var(--button-theme);
+    font-size: medium;
+    font-weight: 600;
+    transition-duration: 0.5s;
+    background-color: transparent;
+    padding: 0;
+  }
 }
-
 button:hover {
   background-color: var(--button-theme);
   color: white;
