@@ -7,15 +7,19 @@ import Search from "../search/Search";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [options, setOptions] = useState([]);
-  const [streams, setStreams] = useState(1);
+  
   const [searchValue, setSearchValue] = useState("");
 
-  const items = ["Bio Science", "Physical Science", "Technology", "Commerce"];
+  const streams = [
+    {label:"All",id:0},
+    {label:"Bio Science",id:1},
+    {label:"Physical Science",id:2},
+    {label:"Technology",id:3},
+    {label:"Commerce",id:4},
+    {label:"Arts",id:5}
+  ]
 
-  const handleStreamChange = (str) => {
-    setStreams(str.target.value);
-  };
+  
   const hanldInputChange = (search) => {
     setSearchValue(search.target.value);
     console.log(search.target.value);
@@ -34,7 +38,7 @@ const Navbar = () => {
 
       <div className="search-dropdown">
         <div className="dropdown">
-          <Dropdown text="Streams" listItems={items} />
+          <Dropdown text="Streams" listItems={streams} />
         </div>
         <div className="search">
           <Search
@@ -46,10 +50,10 @@ const Navbar = () => {
       </div>
       <div className="login-signup">
         <div className="login-container">
-          <Button label={"Login"} onClick={handleLoginClick} />
+          <Button label={"Log in"} onClick={handleLoginClick} />
         </div>
         <div className="signup">
-          <Button label={"Signup"} onClick={handleSignupClick} />
+          <Button label={"Sign up"} onClick={handleSignupClick} />
         </div>
       </div>
     </div>

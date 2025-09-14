@@ -5,27 +5,37 @@ import "./Dropdown.css";
  const Dropdown = ({ text, listItems }) => {
   const [showItems, setShowItems] = useState(false);
   const [selectedItem, setSelectedItem] = useState("");
+  const [mouseIn, setMouseIn] = useState(false);
 
   return (
     <div className="dropdown-container">
-      <div className="dropdown-btn">
-        <button onClick={() => setShowItems((current) => !current)}>
+      <div className="dropdown-btn" 
+        onBlur={() => {setShowItems(mouseIn)}}
+        onMouseEnter={() => setMouseIn(true)}
+        onMouseLeave={() => setMouseIn(false)}
+      >
+        <button 
+          onClick={() => setShowItems((current) => !current)} //update state directly
+          
+        >
           <FaCaretDown />
-          {selectedItem || text}
+          {listItems.filter(
+            (listItem) => listItem.id === selectedItem 
+          )[0]?.label|| text}
         </button>
         {showItems && (
           <div className="content">
-            {listItems.map((listItem, index) => {
+            {listItems.map((listItem) => {
               return (
                 <div
                   className="list-item"
-                  key={index}
+                  key={listItem.id}
                   onClick={() => {
-                    setSelectedItem(listItem);
+                    setSelectedItem(listItem.id);
                     setShowItems(false);
                   }}
                 >
-                  {listItem}
+                  {listItem.label}
                 </div>
               );
             })}
