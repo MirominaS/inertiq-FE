@@ -7,13 +7,16 @@
     height: 45px;
     color: var(--button-theme);
     font-size: medium;
-    font-weight: 600;
+    font-weight: 500;
     transition-duration: 0.5s;
     background-color: transparent;
     padding: 0;
+     font-family: "Lato", sans-serif;
+ 
   }
 }
 button:hover {
   background-color: var(--button-theme);
   color: white;
+  box-shadow: -5px -5px 5px red;
 }
