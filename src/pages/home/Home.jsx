@@ -21,7 +21,7 @@ const Home = () => {
     <div className='home-container'>
        <Navbar/>
        <HomeBanner/>
-       <TopCarousel cardDetails={studentsDetails}/>       
+       <TopCarousel cardDetails={studentsDetails} displayCards={5}/>       
        <NewsLetter/>
        <FooterMain/>
        <FooterBasic/>
