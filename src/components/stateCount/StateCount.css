@@ -1,20 +1,24 @@
 .state-count-component{
-    background-color: rgb(205, 212, 212);
     height: 45px;
     width: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: larger;
+    
     
 }
 
 .state-count{
+    font-size: 48px;
+    font-weight: 800;
     background: linear-gradient(to right, #DDA0DD,#72246C);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .state-label{
+    font-size: 30px;
+    font-weight: 500;
     color: #1C807E;
+    padding: 10px;
 }
