@@ -1,0 +1,24 @@
+.home-banner-container{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    background-color: hwb(160 50% 0%);
+    padding-top: 15vh;
+}
+
+.home-banner-text{
+    width: 50%;
+    background-color: blueviolet;    
+}
+
+.image{
+    background-color: beige;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+   .home-image{
+        min-width: 100%;
+        min-height: 100%;
+        flex-shrink: 0;
+   }
+}
