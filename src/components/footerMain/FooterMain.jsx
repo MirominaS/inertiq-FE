@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FooterMain.css"
 import FooterMainDetails from '../footerMainDetails/FooterMainDetails'
+import Logo from '../logo/Logo'
 
 const FooterMain = () => {
   return (
@@ -12,7 +13,8 @@ const FooterMain = () => {
             <FooterMainDetails heading={"Resources"} listNames={["Academy","Hosting","Theme","Support"]}/>
             <FooterMainDetails heading={"Company"} listNames={["About Us","Career","FAQs","Team","Contact Us"]}/>
         </div>        
-        <FooterMainDetails heading={"Logo"}/>
+        {/* <FooterMainDetails heading={"Logo"}/> */}
+        <Logo height='150px'/>
     </div>
   )
 }

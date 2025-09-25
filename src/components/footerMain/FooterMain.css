@@ -1,10 +1,11 @@
 .footer-main-container{
-    background-color: aquamarine;
+    background-color: #f6e2f5;
     height: 70vh;
     width: 100wv;
     display: flex;
     justify-content: space-around;
     padding-top: 15px;
+    
 }
 .footer-main-details{
     display: flex;
