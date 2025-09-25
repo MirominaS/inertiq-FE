@@ -1,0 +1,20 @@
+.state-count-component{
+    background-color: rgb(205, 212, 212);
+    height: 45px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+    
+}
+
+.state-count{
+    background: linear-gradient(to right, #DDA0DD,#72246C);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.state-label{
+    color: #1C807E;
+}
