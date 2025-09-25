@@ -9,7 +9,7 @@ const NewsLetter = () => {
         <div className='newsletter-details'>
             <div className='newsletter-text'>
                 <div className='heading'>Stay Tuned!</div>
-                <div className='text'>Subscribe to receive the latest news and updates about TDA.
+                <div className='text-content'>Subscribe to receive the latest news and updates about TDA.
                         We promise not to spam you!
                  </div>
                
