@@ -2,13 +2,19 @@
     width: 100vw;
     height: 85vh;
     display: flex;
-    background-color: hwb(160 50% 0%);
-    padding-top: 15vh;
+    /* background-color: hwb(160 50% 0%); */
+    padding-top: 15vh;    
+    margin: 0;
 }
 
 .home-banner-text{
     width: 50%;
-    background-color: blueviolet;    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 40px;  
+  
 }
 
 .image{
@@ -21,4 +27,59 @@
         min-height: 100%;
         flex-shrink: 0;
    }
+}
+
+.home-banner-state-count{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.home-banner-button{
+    position: relative;
+    width: 250px;
+    
+}
+
+.home-banner-button-icon {
+    position: absolute;
+    top: 15px;
+    left: 220px;
+    color: var(--button-theme-primary);
+    font-size: larg;
+}
+
+.home-banner-button:hover .home-banner-button-icon{
+    color: white;
+}
+
+.home-banner-text-head{
+    height: 40%;
+    padding: 0;
+    margin: 0;
+    h3{
+        font-size: 36px;
+        color: black;
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+        .h3-color{
+            color: #880085;
+        }
+    }
+    h2{
+        padding: 0;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 48px;
+        font-weight: 600;
+        .h2-color{
+            color: var(--button-theme-primary);
+        }        
+    }
+    p{
+        padding: 0;
+        margin-top: 15px;
+        font-size: 20px;
+    }    
 }
