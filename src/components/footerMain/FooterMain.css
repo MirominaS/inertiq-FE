@@ -1,0 +1,13 @@
+.footer-main-container{
+    background-color: aquamarine;
+    height: 70vh;
+    width: 100wv;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.footer-main-details{
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+}
