@@ -1,5 +1,8 @@
+.top-carausel{
+    height: 50vh;
+}
 .top-carousel-container{
-    height: 200px;
+    
     /* width: 100vw; */
     display: flex;
     justify-content: space-around;

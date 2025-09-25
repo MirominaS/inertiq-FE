@@ -1,43 +1,53 @@
-import React, { useEffect, useRef } from 'react'
-import Card from '../card/Card'
-import image1 from '/src/assets/main/students.jpg'
-import './TopCarousel.css'
+import React, { useEffect, useRef } from "react";
+import Card from "../card/Card";
+import image1 from "/src/assets/main/students.jpg";
+import "./TopCarousel.css";
 
-const TopCarousel = ({cardDetails=[ {id:0,image: image1 ,name:"",stream:"",percentage:""}]}) => {
-  const carouselContainer = useRef()
+const TopCarousel = ({
+  cardDetails = [
+    { id: 0, image: image1, name: "", stream: "", percentage: "" },
+  ], 
+  displayCards = 5
+}) => {
+  const carouselContainer = useRef();
   var movement = 0;
-  useEffect(() => {      
-      
-   },[]) 
-   
-   setInterval(() =>{
-        carouselContainer.current.style.transitionDuration = "0.5s"
-        console.log("sss", movement)
-        movement += 33;
-        if (movement === 33*cardDetails.length ) {
-          movement = 0;
-          carouselContainer.current.style.transitionDuration = "0s"
-        }
-        carouselContainer.current.style.transform = `translateX(-${movement}vw)`;
-      },2000)
-    
- 
+  var cardCount = cardDetails.length;
+  var cardWidth = (100/displayCards);
+  
+  setInterval(() => {
+    carouselContainer.current.style.transitionDuration = "0.5s";
+    movement += cardWidth;
+    if (movement === cardWidth * cardCount) { //cardWidth * cardCount = total cards' width
+      movement = 0;
+      carouselContainer.current.style.transitionDuration = "0s";
+    }
+    carouselContainer.current.style.transform = `translateX(-${movement}vw)`;
+  }, 2000);
 
   return (
-    <div className='top-carousel-container' style={{width:`${33*(cardDetails.length+3)}vw`}} ref={carouselContainer}>
-        {
-          cardDetails.concat(cardDetails.slice(0,3)).map((cardDetail,index) => 
-              <Card 
-                key={index}
-                image={cardDetail.image} 
-                studentName={cardDetail.name} 
-                stream={cardDetail.stream} 
-                percentage={cardDetail.percentage}
-              />
-          )
-        }
-    </div> 
-  )
-}
+    <div className="top-carausel">
+      <div>
+        This Week - No 1
+      </div>
+      <div
+        className="top-carousel-container"
+        style={{ width: `${cardWidth * (cardCount + displayCards)}vw` }}
+        ref={carouselContainer}
+      >
+        {cardDetails
+          .concat(cardDetails.slice(0, displayCards)) // card details + concat array
+          .map((cardDetail, index) => (
+            <Card
+              key={index}
+              image={cardDetail.image}
+              studentName={cardDetail.name}
+              stream={cardDetail.stream}
+              percentage={cardDetail.percentage}
+            />
+          ))}
+      </div>
+    </div>
+  );
+};
 
-export default TopCarousel
+export default TopCarousel;
