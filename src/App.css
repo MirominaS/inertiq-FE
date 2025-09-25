@@ -4,16 +4,16 @@
   --button-theme-primary: #72246C;  /*generalizing*/
   --button-theme-danger: red;
 }
+
 body {
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
-   font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-.app {
-  width: 100vw;
-}
 button{
     cursor: pointer;
 }
