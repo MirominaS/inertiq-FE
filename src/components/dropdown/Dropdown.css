@@ -4,7 +4,7 @@
 } */
 
 .dropdown-container {
-  width: 200px;
+  width: 150px;
   height: 45px;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@
     align-items: center;
   }
   .list-item:hover {
-    /* background-color: chocolate; */
     background-color: #E8D9E5;
+     box-shadow: 5px 5px 100px #72246C;
   }
 }
