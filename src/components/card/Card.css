@@ -1,0 +1,41 @@
+.card-container{
+    height: 180px;
+    width: 140px;
+    background-color: darkcyan;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 5px black;     
+}
+.image{
+    height: 180px;
+    width: 140px;    
+    img{
+        border-radius: 10px;
+        height: 180px;
+        width: 140px;
+        
+    }
+}
+.details{
+    position: relative;
+    bottom:80px;
+    text-align: center;
+    opacity: 0;
+    transition-duration: 0.3s;    
+}
+.card-container:hover .image img{
+    opacity: 0.5;
+}
+.card-container:hover{
+    transform: scale(1.2);    
+    background-color: black ;
+    box-shadow: 5px 5px 20px 5px black;
+}
+.card-container:hover .details{
+    opacity: 100%;
+    text-shadow: 0 0 5px black;
+}
+
+
+
