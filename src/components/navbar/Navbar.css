@@ -6,6 +6,7 @@
     min-width: 100vw;
     position: fixed;
     height: 15vh;
+    z-index: 100;
 }
 
 .search-dropdown{
