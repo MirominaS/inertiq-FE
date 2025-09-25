@@ -1,20 +1,29 @@
 .footer-basic-container{
     background-color: #72246C;
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .footer-basic-left{
-    width: 30vw;
+    width: 30%;
     display: flex;
     justify-content: space-around;
     padding-left: 25px;
 }
 .footer-basic-right{
-    padding-right: 25px;
-    width: 30vw;
+    padding-right: 100px;
+    width: 10%;
     display: flex;
     justify-content: space-around;
+    color: white;
+    font-size: large;
+}
+.footer-copy-rights{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
 }
