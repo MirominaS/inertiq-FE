@@ -3,7 +3,7 @@
   button {
     border: 1px solid var(--button-theme);
     border-radius: 10px;
-    width: 100px;
+    /* width: 100px; */
     height: 45px;
     color: var(--button-theme);
     font-size: medium;
