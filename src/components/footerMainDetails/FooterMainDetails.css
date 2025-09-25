@@ -1,0 +1,16 @@
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #72246C;
+}
+.text{
+    font-size: 14px;
+    font-weight: 500;
+    color: #72246C;
+    padding: 5px;
+    cursor: pointer;
+}
+.text:hover{
+    text-decoration: underline;
+}
+    
