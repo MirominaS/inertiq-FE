@@ -1,0 +1,20 @@
+.footer-basic-container{
+    background-color: #72246C;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-basic-left{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 25px;
+}
+.footer-basic-right{
+    padding-right: 25px;
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+}
