@@ -16,7 +16,7 @@ const Search = ({ type, value, handleChange }) => {
             value={value}
             onChange={handleChange}
             onKeyDown={(e) => {
-              setKeyChecker(e.key === "Enter") //direct implementation
+              setKeyChecker(e.key === "Enter" ) //direct implementation
               // if (e.key === "Enter"){
               //   setKeyChecker(true)
               // } else {
@@ -24,7 +24,7 @@ const Search = ({ type, value, handleChange }) => {
               // }              
             }}
            // style={(value === "" && keyChecker) ? {border:"1px solid red"}:{border:"1px solid purple"}} //ternary operator(if else condition)
-            style={{border:`1px solid ${(value === "" && keyChecker) ? "red":"purple"}`}} //string interpolation
+            style={{border:`1px solid ${(value === "" &&  keyChecker) ? "red":"purple"}`}} //string interpolation
           />
         </div>
       </div>
