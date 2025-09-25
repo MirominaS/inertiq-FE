@@ -18,5 +18,5 @@
 button:hover {
   background-color: var(--button-theme);
   color: white;
-  box-shadow: -5px -5px 5px red;
+  box-shadow: 5px 5px 10px #DDA0DD;
 }
