@@ -1,0 +1,11 @@
+.input-container{
+    input{
+        background-color: #E8D9E5;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+}
+input:focus{
+    outline: none;
+}
