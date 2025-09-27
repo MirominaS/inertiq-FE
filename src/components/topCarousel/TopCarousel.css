@@ -1,6 +1,7 @@
 .top-carausel{
     height: 50vh;
 }
+
 .top-carousel-container{
     
     /* width: 100vw; */
@@ -10,3 +11,9 @@
     
     
 } 
+
+.top-carousel-title{
+    font-size: 34px;
+    padding-left: 40px;
+    font-weight: 600;
+}

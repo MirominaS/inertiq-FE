@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Card from "../card/Card";
 import image1 from "/src/assets/main/students.jpg";
 import "./TopCarousel.css";
+import { FaAward } from "react-icons/fa6";
 
 const TopCarousel = ({
   cardDetails = [
@@ -26,8 +27,9 @@ const TopCarousel = ({
 
   return (
     <div className="top-carausel">
-      <div>
-        This Week - No 1
+      <div className="top-carousel-title">
+        This Week - No 1 &nbsp; &nbsp;
+        <FaAward style={{color:"gold"}} />
       </div>
       <div
         className="top-carousel-container"
