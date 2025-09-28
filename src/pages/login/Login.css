@@ -1,5 +1,4 @@
 .login-container{
-    background: grey;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -8,7 +7,9 @@
     align-items: center;
     overflow: hidden;
     color: #72246C;
+    background: #f6e2f5;
 }
+
 .login-input{
     background-color: rgb(255, 255, 255);
     height: 55%;
@@ -44,8 +45,16 @@
         text-decoration: underline;
         cursor: pointer;
     }
-    
+    .login-password{
+        position: relative;
+        .login-password-icon{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+    }    
 }
+
 .login-google{
     background-color: white;
     width: 400px;
