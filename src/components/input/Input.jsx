@@ -1,12 +1,12 @@
 import React from 'react'
 import './Input.css'
 
-const Input = ({width = '100px',height = '30px',handleChange,placeholder,value}) => {
+const Input = ({width = '100px',height = '30px',handleChange,placeholder,value,type}) => {
     
   return (
     <div className='input-container'>
         <input 
-            type="text" 
+            type={type} 
             value={value}
             onChange ={handleChange} 
             placeholder={placeholder} 
