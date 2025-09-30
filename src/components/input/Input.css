@@ -1,4 +1,7 @@
 .input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     input{
         background-color: #E8D9E5;
         border: none;
