@@ -49,8 +49,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="login-signup">
-        <div className="login-container">
-          <Button label={"Log in"} onClick={handleLoginClick} />
+        <div className="login">
+          <Button label={"Log in"} onClick={handleLoginClick}  />
         </div>
         <div className="signup">
           <Button label={"Sign up"} onClick={handleSignupClick} />

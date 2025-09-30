@@ -15,16 +15,15 @@
      align-items: center;
      justify-content: space-between;
      align-items: center;
-     gap: 15px;
-     
-   
-
+     gap: 15px;   
 }
 .login-signup{
     width: 300px;
     display: flex;
     position: relative;
     left: 15px;
-    gap: 15px;
-    
+    gap: 15px; 
+}
+.logo{
+    padding-left:15px ;
 }
