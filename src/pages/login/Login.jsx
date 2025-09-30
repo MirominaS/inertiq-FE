@@ -79,33 +79,36 @@ const Login = () => {
         <div className='login-username'>
           <Input 
             height='35px'
-            width='400px' 
+            width='100%' 
+            maxWidth='400px' 
             placeholder='Username' 
             value={userName}
             handleChange={handleUserName}
           />
-            {error.username && <span className='login-message'>{error.username}</span>}
+            {error.username && <span className='login-error-message'>{error.username}</span>}
         </div>
         <div className='login-password'>
           <div className='login-password-input'>
             <Input 
               height='35px' 
-              width='400px' 
+              width='100%' 
+              maxWidth='400px'
               placeholder='Password'
               type={!showPassword ? "password" : "text"}
               value={password}
               handleChange={handlePassword}
             />
-            {error.pswrd && <span className='login-message'>{error.pswrd}</span>}
-          </div>
+            {error.pswrd && <span className='login-error-message'>{error.pswrd}</span>}
           <div className='login-password-icon' onClick={handlePasswordIcon}>
             {showPassword ? <FaEye /> :<FaEyeSlash />}
-          </div>          
+          </div>  
+          </div>
+               
           
         </div>
         <div className='login-forget-pswd'>Forget password?</div>
         <div className='login-button'>
-          <Button label={"Log in"} width='400px' onClick={handleClick}/>
+          <Button label={"Log in"} width='80%' onClick={handleClick}/>
         </div>
         <div className='login-create-acc'>Don't have an account? Click here to Create an account.</div>
       </div>
