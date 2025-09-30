@@ -1,5 +1,9 @@
 .button-container {
   gap: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   button {
     border: 1px solid var(--button-theme);
     border-radius: 10px;
@@ -11,7 +15,7 @@
     transition-duration: 0.5s;
     background-color: transparent;
     padding: 0;
-     font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
  
   }
 }
