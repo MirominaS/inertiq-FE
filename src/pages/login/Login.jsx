@@ -99,9 +99,9 @@ const Login = () => {
               handleChange={handlePassword}
             />
             {error.pswrd && <span className='login-error-message'>{error.pswrd}</span>}
-          <div className='login-password-icon' onClick={handlePasswordIcon}>
-            {showPassword ? <FaEye /> :<FaEyeSlash />}
-          </div>  
+            <div className='login-password-icon' onClick={handlePasswordIcon}>
+              {showPassword ? <FaEye /> :<FaEyeSlash />}
+            </div>  
           </div>
                
           
