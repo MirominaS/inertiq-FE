@@ -10,7 +10,7 @@ import { MdOutlineCheckBoxOutlineBlank, MdOutlineCheckBox  } from "react-icons/m
 const Signup = () => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
- 
+  const [email,setEmail] = useState(''); 
 
    const streams = [
     {label:"Select",id:0},
@@ -29,6 +29,11 @@ const Signup = () => {
   const handleLastname = (lname) => {
     setLastname(lname.target.value)
     console.log(lastname)
+  }
+
+  const handleEmail = (mail) => {
+    setEmail(mail.target.value)
+    console.log(email)
   }
 
   return (
@@ -68,6 +73,7 @@ const Signup = () => {
               width='80%'
               height='35px'
               placeholder={"Email"}
+              handleChange={handleEmail}
             />
           </div>
           <div className='signup-input-stream'>
