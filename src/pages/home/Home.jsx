@@ -10,6 +10,8 @@ import FooterBasic from '../../components/footerBasic/FooterBasic'
 import NewsLetter from '../../components/newsLetter/NewsLetter'
 import HomeBanner from '../../components/homeBanner/HomeBanner'
 import './Home.css'
+import { useNavigate } from "react-router-dom";
+
 const Home = () => {
   const studentsDetails = [
     {id:0,image: image1 ,name:"Sanvy",stream:"Bio Science",percentage:"68%"},
@@ -21,13 +23,15 @@ const Home = () => {
 
   const [searchValue, setSearchValue] = useState("");
 
+  const navigate = useNavigate()
+
   const handleInputChange = (search) => {
     setSearchValue(search.target.value);
     console.log(search.target.value);
   };
 
   const handleLoginClick = () => {
-    alert("Login Clicked!");
+    navigate('/login')
   };
 
   const handleSignupClick = () => {
