@@ -9,6 +9,7 @@ import { MdOutlineCheckBoxOutlineBlank, MdOutlineCheckBox  } from "react-icons/m
 
 const Signup = () => {
   const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
  
 
    const streams = [
@@ -22,6 +23,12 @@ const Signup = () => {
 
   const  handleFirstname = (fname) => {
     setFirstname(fname.target.value)
+    console.log(firstname)
+  }
+
+  const handleLastname = (lname) => {
+    setLastname(lname.target.value)
+    console.log(lastname)
   }
 
   return (
@@ -49,6 +56,7 @@ const Signup = () => {
               width='80%'
               height='35px'
               placeholder={"Lastname"}
+              handleChange={handleLastname}
             />
           </div>
         </div>
