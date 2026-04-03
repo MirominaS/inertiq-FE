@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import Navbar from '../../components/navbar/Navbar'
 import Card from '../../components/card/Card'
 import TopCarousel from '../../components/topCarousel/TopCarousel'
@@ -18,9 +18,16 @@ const Home = () => {
     {id:3,image: image1 ,name:"Sanvy",stream:"Bio Science",percentage:"68%"},
     {id:4,image: image1 ,name:"Sanvy",stream:"Bio Science",percentage:"68%"}
   ]
+
+  const [searchValue, setSearchValue] = useState("");
+
+   const handleInputChange = (search) => {
+    setSearchValue(search.target.value);
+    console.log(search.target.value);
+  };
   return (
     <div className='home-container'>
-       <Navbar/>
+       <Navbar handleInputChange={handleInputChange} searchValue={searchValue}/>
        <HomeBanner/>
        <TopCarousel cardDetails={studentsDetails} displayCards={5}/>       
        <NewsLetter/>
