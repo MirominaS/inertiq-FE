@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Signup.css'
 import Logo from '../../components/logo/Logo'
 import FooterBasic from '../../components/footerBasic/FooterBasic'
@@ -8,6 +8,9 @@ import Button from '../../components/button/Button'
 import { MdOutlineCheckBoxOutlineBlank, MdOutlineCheckBox  } from "react-icons/md";
 
 const Signup = () => {
+  const [firstname, setFirstname] = useState('');
+ 
+
    const streams = [
     {label:"Select",id:0},
     {label:"Bio Science",id:1},
@@ -16,6 +19,11 @@ const Signup = () => {
     {label:"Commerce",id:4},
     {label:"Arts",id:5}
   ]
+
+  const  handleFirstname = (fname) => {
+    setFirstname(fname.target.value)
+  }
+
   return (
     <div className='signup-container'>
       <div className='signup-logo'>
@@ -31,6 +39,7 @@ const Signup = () => {
               width='80%'
               height='35px'
               placeholder={"Firstname"}
+              handleChange={handleFirstname}
             />
           </div>
           <div className='signup-input-lastname'>
@@ -98,7 +107,7 @@ const Signup = () => {
           <div className='signup-input-term-text'>Agree to the Terms and Conditions</div>
         </div>
         <div className='signup-input-button'>
-          <Button/>
+          <Button label={"Create Account"} width='91%'/>
         </div>
       </div>
       <div className='signup-footer'>
