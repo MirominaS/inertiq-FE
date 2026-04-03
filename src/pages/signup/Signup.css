@@ -36,7 +36,7 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: center; 
 
         .signup-input-firstname,.signup-input-lastname,.signup-input-email,
         .signup-input-stream,.signup-input-pswd,.signup-input-conf-pswd{
@@ -53,6 +53,13 @@
     .signup-input-title{
         font-size: 28px;
         font-weight: 600;  
+    }
+
+    .signup-input-terms{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+        margin-left: 8%;
     }
    
 }

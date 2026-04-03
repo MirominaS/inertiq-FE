@@ -5,6 +5,7 @@ import FooterBasic from '../../components/footerBasic/FooterBasic'
 import Input from '../../components/input/Input'
 import Dropdown from '../../components/dropdown/Dropdown'
 import Button from '../../components/button/Button'
+import { MdOutlineCheckBoxOutlineBlank, MdOutlineCheckBox  } from "react-icons/md";
 
 const Signup = () => {
    const streams = [
@@ -29,6 +30,7 @@ const Signup = () => {
               type="text"
               width='80%'
               height='35px'
+              placeholder={"Firstname"}
             />
           </div>
           <div className='signup-input-lastname'>
@@ -37,6 +39,7 @@ const Signup = () => {
               type="text"
               width='80%'
               height='35px'
+              placeholder={"Lastname"}
             />
           </div>
         </div>
@@ -47,6 +50,7 @@ const Signup = () => {
               type="text"
               width='80%'
               height='35px'
+              placeholder={"Email"}
             />
           </div>
           <div className='signup-input-stream'>
@@ -72,22 +76,25 @@ const Signup = () => {
           <div className='signup-input-pswd'>
             <Input
               maxWidth="400px"
-              type="text"
+              type="password"
               width='80%'
               height='35px'
+              placeholder={"Password"}
             />
           </div>
           <div className='signup-input-conf-pswd'>
             <Input
               maxWidth="400px"
-              type="text"
+              type="password"
               width='80%'
               height='35px'
+              placeholder={"Confirm Password"}
+              
             />
           </div>
         </div>
         <div className='signup-input-terms'>
-          <div className='signup-input-checkbox'>|_|</div>
+          <div className='signup-input-checkbox'><MdOutlineCheckBoxOutlineBlank /><MdOutlineCheckBox /></div>
           <div className='signup-input-term-text'>Agree to the Terms and Conditions</div>
         </div>
         <div className='signup-input-button'>
