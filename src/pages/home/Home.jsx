@@ -30,12 +30,17 @@ const Home = () => {
     alert("Login Clicked!");
   };
 
+  const handleSignupClick = () => {
+    alert("Signup Clicked!");
+  };
+
   return (
     <div className='home-container'>
       <Navbar 
         handleInputChange={handleInputChange} 
         searchValue={searchValue}
         handleLoginClick={handleLoginClick}
+        handleSignupClick={handleSignupClick}
       />
       <HomeBanner/>
       <TopCarousel cardDetails={studentsDetails} displayCards={5}/>       

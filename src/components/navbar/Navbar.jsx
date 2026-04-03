@@ -6,7 +6,7 @@ import Button from "../button/Button";
 import Search from "../search/Search";
 import "./Navbar.css";
 
-const Navbar = ({handleInputChange,searchValue,handleLoginClick}) => {
+const Navbar = ({handleInputChange,searchValue,handleLoginClick, handleSignupClick}) => {
 
   const streams = [
     {label:"All",id:0},
@@ -17,12 +17,6 @@ const Navbar = ({handleInputChange,searchValue,handleLoginClick}) => {
     {label:"Arts",id:5}
   ]
 
-  
- 
- 
-  const handleSignupClick = () => {
-    alert("Signup Clicked!");
-  };
   return (
     <div className="nav-container">
       <div className="logo">
