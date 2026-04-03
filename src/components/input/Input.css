@@ -7,7 +7,9 @@
         border: none;
         border-radius: 5px;
         padding-left: 10px;
-        
+        ::placeholder{
+            color: rgb(158, 158, 158);
+        }
     }
 }
 input:focus, input:hover{
