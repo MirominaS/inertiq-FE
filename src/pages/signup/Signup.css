@@ -1,0 +1,58 @@
+.signup-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    color: #72246C;
+    background: #f6e2f5;
+}
+
+.signup-logo{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-input{
+    background-color: white;
+    height: 65%;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+    position: relative;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .signup-input-title,.signup-input-name,.signup-input-mail-stream,.signup-input-password{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .signup-input-firstname,.signup-input-lastname,.signup-input-email,
+        .signup-input-stream,.signup-input-pswd,.signup-input-conf-pswd{
+        width: 50%;
+       
+    }
+    .signup-input-stream{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    }
+    .signup-input-title{
+        font-size: 28px;
+        font-weight: 600;  
+    }
+   
+}
