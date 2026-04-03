@@ -35,7 +35,7 @@ const Home = () => {
   };
 
   const handleSignupClick = () => {
-    alert("Signup Clicked!");
+    navigate('/signup')
   };
 
   return (
