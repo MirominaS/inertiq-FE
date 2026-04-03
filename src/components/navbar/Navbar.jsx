@@ -6,9 +6,7 @@ import Button from "../button/Button";
 import Search from "../search/Search";
 import "./Navbar.css";
 
-const Navbar = () => {
-  
-  const [searchValue, setSearchValue] = useState("");
+const Navbar = ({handleInputChange,searchValue}) => {
 
   const streams = [
     {label:"All",id:0},
@@ -20,10 +18,7 @@ const Navbar = () => {
   ]
 
   
-  const hanldInputChange = (search) => {
-    setSearchValue(search.target.value);
-    console.log(search.target.value);
-  };
+ 
   const handleLoginClick = () => {
     alert("Login Clicked!");
   };
@@ -44,7 +39,7 @@ const Navbar = () => {
           <Search
             type={"text"}
             value={searchValue}
-            handleChange={hanldInputChange}
+            handleChange={handleInputChange}
           />
         </div>
       </div>
