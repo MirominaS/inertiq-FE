@@ -21,18 +21,27 @@ const Home = () => {
 
   const [searchValue, setSearchValue] = useState("");
 
-   const handleInputChange = (search) => {
+  const handleInputChange = (search) => {
     setSearchValue(search.target.value);
     console.log(search.target.value);
   };
+
+  const handleLoginClick = () => {
+    alert("Login Clicked!");
+  };
+
   return (
     <div className='home-container'>
-       <Navbar handleInputChange={handleInputChange} searchValue={searchValue}/>
-       <HomeBanner/>
-       <TopCarousel cardDetails={studentsDetails} displayCards={5}/>       
-       <NewsLetter/>
-       <FooterMain/>
-       <FooterBasic/>
+      <Navbar 
+        handleInputChange={handleInputChange} 
+        searchValue={searchValue}
+        handleLoginClick={handleLoginClick}
+      />
+      <HomeBanner/>
+      <TopCarousel cardDetails={studentsDetails} displayCards={5}/>       
+      <NewsLetter/>
+      <FooterMain/>
+      <FooterBasic/>
     </div>
   )
 }

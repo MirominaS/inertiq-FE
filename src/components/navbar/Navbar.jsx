@@ -6,7 +6,7 @@ import Button from "../button/Button";
 import Search from "../search/Search";
 import "./Navbar.css";
 
-const Navbar = ({handleInputChange,searchValue}) => {
+const Navbar = ({handleInputChange,searchValue,handleLoginClick}) => {
 
   const streams = [
     {label:"All",id:0},
@@ -19,9 +19,7 @@ const Navbar = ({handleInputChange,searchValue}) => {
 
   
  
-  const handleLoginClick = () => {
-    alert("Login Clicked!");
-  };
+ 
   const handleSignupClick = () => {
     alert("Signup Clicked!");
   };
