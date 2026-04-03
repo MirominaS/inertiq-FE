@@ -2,7 +2,21 @@ import React, { useState } from "react";
 import { FaCaretDown } from "react-icons/fa6";
 import "./Dropdown.css";
 
- const Dropdown = ({ text, listItems }) => {
+ const Dropdown = ({ 
+    text,
+    listItems,
+    width="150px",
+    height="45px",
+    display,
+    justifyContent,
+    alignItems,
+    borderRadius,
+    border,
+    backgroundColor,
+    textAlign,
+    padding,
+    color
+  }) => {
   const [showItems, setShowItems] = useState(false);
   const [selectedItem, setSelectedItem] = useState("");
   const [mouseIn, setMouseIn] = useState(false);
@@ -10,18 +24,19 @@ import "./Dropdown.css";
   return (
     <div className="dropdown-container">
       <div className="dropdown-btn" 
+        style={{width,height}}
         onBlur={() => {setShowItems(mouseIn)}}
         onMouseEnter={() => setMouseIn(true)}
         onMouseLeave={() => setMouseIn(false)}
       >
         <button 
           onClick={() => setShowItems((current) => !current)} //update state directly
-          
-        >
-          <FaCaretDown />
+          style={{display,justifyContent,alignItems,borderRadius,border,backgroundColor,textAlign,padding,color}}
+        >         
           {listItems.filter(
             (listItem) => listItem.id === selectedItem 
           )[0]?.label|| text}
+          <FaCaretDown />
         </button>
         {showItems && (
           <div className="content">
