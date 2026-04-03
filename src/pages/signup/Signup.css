@@ -61,5 +61,7 @@
         width: 100%;
         margin-left: 8%;
     }
-   
+   .signup-input-button{
+        width: 100%;
+   }
 }
