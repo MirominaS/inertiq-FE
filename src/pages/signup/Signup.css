@@ -43,8 +43,29 @@
         width: 50%;
        
     }
+
+    
+    .signup-input-pswd,
+    .signup-input-conf-pswd {
+        position: relative;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sigup-password-icon {
+        position: absolute; 
+        right: 12%;          
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
     .signup-input-stream{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -58,10 +79,37 @@
     .signup-input-terms{
         display: flex;
         justify-content: start;
+        flex-direction: column;
         width: 100%;
         margin-left: 8%;
+
+        .signup-terms{
+            display: flex;
+        }
+
+        .signup-input-checkbox{
+            font-size: 20px;
+            padding-right: 5px;
+        }
     }
    .signup-input-button{
         width: 100%;
    }
 }
+
+.signup-message{
+    color: var(--theme-danger);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.signup-error-message{
+    color: var(--theme-danger);
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    left: 8%;
+}
+
+
+ 
