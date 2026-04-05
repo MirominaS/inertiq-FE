@@ -15,10 +15,11 @@ import "./Dropdown.css";
     backgroundColor,
     textAlign,
     padding,
-    color
+    color,
+    dataSent,
+    value
   }) => {
   const [showItems, setShowItems] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("");
   const [mouseIn, setMouseIn] = useState(false);
 
   return (
@@ -33,9 +34,7 @@ import "./Dropdown.css";
           onClick={() => setShowItems((current) => !current)} //update state directly
           style={{display,justifyContent,alignItems,borderRadius,border,backgroundColor,textAlign,padding,color}}
         >         
-          {listItems.filter(
-            (listItem) => listItem.id === selectedItem 
-          )[0]?.label|| text}
+          {listItems.find(item => item.id === value)?.label || text}
           <FaCaretDown />
         </button>
         {showItems && (
@@ -46,8 +45,9 @@ import "./Dropdown.css";
                   className="list-item"
                   key={listItem.id}
                   onClick={() => {
-                    setSelectedItem(listItem.id);
                     setShowItems(false);
+                    console.log(listItem)
+                    dataSent(listItem.id)
                   }}
                 >
                   {listItem.label}
