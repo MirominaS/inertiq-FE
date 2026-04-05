@@ -59,9 +59,6 @@ const Login = () => {
         message = "Login Success!"
         setUserName("")
         setPassword("")
-      }else if (userName.length !== 0 || password.length !== 0){
-        validationUserName()
-        validationPassword() 
       }else{
         message = "Enter Username and Password"
       }
